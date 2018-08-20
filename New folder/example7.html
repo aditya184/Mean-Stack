@@ -1,0 +1,20 @@
+<input type="checkbox" onclick="change(this)"/>
+<input type="password" id="txt"/>
+<script>
+ function change(record)
+ {
+ 	//console.log(record);
+ 	//console.log(document);
+ 	//console.log(document.getElementById("txt"));
+ 	if(record.checked == true)
+ 	{
+ 		//console.log("ok");
+ 		document.getElementById("txt").attributes.type.value="text"
+ 	}
+ 	else
+ 	{
+ 		//console.log("invalid");
+ 		document.getElementById("txt").attributes.type.value="password"
+ 	}
+ }
+</script>
