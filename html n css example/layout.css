@@ -145,4 +145,21 @@ body{font-family:arial;font-size:16px;color:#000000;background:#ffffff}
 .footer .col3 p{padding: 10px 0;color: #666;line-height: 150%;}
 .txt{width:50%;height: 30px;border:1px solid #999;}
 .footer .col3 h2{font-variant: small-caps; font-weight: normal;color:#666;padding-top: 10px;}
-
+.slider .col9 h2{padding-bottom: 10px; }
+.menu ul{list-style: none;border-top:1px solid #666;padding: 10px;margin-top:5px;}
+.menu ul li{padding: 10px 25px;float: left;}
+.menu ul li a{text-transform: uppercase;text-decoration: none; color:#666;font-size: 15px;}
+.menu_li{float: right !important;}
+.menu ul li a:hover{color: rgb(254,152,15);transition: background 2s;cursor: pointer;}
+.logo{padding:15px 0;}
+.logo select{width: 45%;height: 30px;}
+/*.logo select:hover{background:rgb(254,152,15);text-color:#fff;}
+*/
+.logo .col3{padding-top: 15px;}
+.upper_menu ul{list-style: none;padding-top: 5px;}
+.upper_menu ul li{padding: 10px 10px;float: left;}
+.upper_menu ul li a{text-transform: uppercase;text-decoration: none;color: #666;font-size: 14px;}
+.contact{background: rgb(230,230,230);padding: 10px 0;font-size: 14px; color:#666;}
+.contact a{text-decoration: none;color:#666;}
+.map{/*border:1px solid*/;padding: 40px 0; font-size: 14px;
+ background-image: url(images/home/map.png);background-size: 100% 100%;color:#666;}
