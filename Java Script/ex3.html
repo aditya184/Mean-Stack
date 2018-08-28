@@ -1,0 +1,25 @@
+<input type="text" id="txt">
+<button onclick="getData()">Enter</button>
+<p id="para">hello</p>
+<p id="para">hello</p>
+
+
+<script type="text/javascript">
+	function getData()
+	{
+		//console.log("Test");
+		//console.log(document);
+		//console.log(document.getElementById("txt"));
+		rec = document.getElementById("txt").value;
+		//console.log(rec);
+		if(rec.length == 0)
+		{
+			//console.log(document.getElementById("para"));
+			document.getElementById("para").innerHTML="Empty";
+		}
+		else
+		{
+			document.getElementById("para").innerHTML="Valid";
+		}
+	}
+</script>

@@ -1,0 +1,98 @@
+<script type="text/javascript">
+	//alert("TEST");
+	//document.write(1000);
+	//console.log("hello");
+
+	data1=36;
+	data2=20;
+	console.log(Math);
+	console.log(data1+data2);
+	
+	if(data1>data2)
+	{
+		console.log(Math.sqrt(data1))
+	}
+	else
+	{
+		console.log(Math.pow(data2,2))
+	}
+
+	data=[];
+	for(x=0;x<=5;x++)
+	{
+		data[x]=100;
+	}
+	console.log(data);
+
+	y=0;
+	while(y<5)
+	{
+		console.log(y);
+		y++;
+	}
+
+	rec=[10,20,30,40,50];
+	console.log(rec);
+	console.log(rec[0]);
+	console.log(rec[1]);
+	console.log(rec[2]);
+	console.log(rec.length);
+
+	for(i=0;i<rec.length;i++)
+	{
+		console.log(rec[i]);
+	}
+
+	//for loop in
+	for(ans in rec){
+		console.log(rec[ans]);
+	}
+
+	delete rec[1];
+	console.log(rec);
+
+	data = {name:"Aditya",age:22}
+	console.log(data);
+
+	for(ans in data)
+	{
+		console.log(data[ans])
+	}
+
+	data=[{name:"Aditya",age:22},{name:"Nikhil",age:23},{name:"Akashay",age:21}]
+	console.log(data);
+
+
+	str = ""
+	for(ans in data){
+		//console.log(data[ans]);
+		//console.log(data[ans].name);
+		//console.log(data[ans]['name']);
+		str = str + "<li>" + data[ans]['name'] + "</li>"
+	}
+
+	str = "<ul>" + str + "</ul"
+	console.log(str);
+
+	function show()
+	{
+		console.log("Test");
+	}
+	function show1()
+	{
+		console.log("Test1");
+	}
+	function show2()
+	{
+		console.log("hover");
+	}
+	function show3()
+	{
+		console.log("out");
+	}
+
+</script>
+
+<button onclick="show()">Enter</button>
+<input type="text" onfocus="show()" onblur="show1()" onmouseover="show2()" 
+onmouseout="show3()">
