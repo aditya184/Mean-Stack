@@ -1,0 +1,18 @@
+<input type="checkbox" class="chk" onchange="show(this)">
+<input type="password" id="txt">
+<script type="text/javascript">
+	function show(curele) {
+		//console.log("test");
+		//console.log(curele);
+		//console.log(curele.checked);
+		//console.log(document.querySelector("#txt"));
+		if(curele.checked == true)
+		{
+			document.querySelector("#txt").attributes.type.value = "text";
+		}
+		else
+		{
+			document.querySelector("#txt").attributes.type.value = "password";
+		}
+	}
+</script>

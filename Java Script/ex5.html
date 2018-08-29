@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<body onload="hidepara()">
+	<h1 onclick="openpara(this)">Heading1</h1>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+	<h1 onclick="openpara(this)">Heading2</h1>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+	<h1 onclick="openpara(this)">Heading3</h1>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+	<style type="text/css">
+		p,h1{
+			width:300px;
+			margin:0;
+			border:1px solid;
+		}
+	</style>
+
+	<script type="text/javascript">
+		function hidepara() {
+			//console.log("test");
+			para = document.getElementsByTagName("p");
+			//console.log(para);
+			for(i=0;i<para.length;i++)
+			{
+				//console.log(i);
+				//console.log(para[i]);
+				if(i!=0)
+				{
+					para[i].style.display="none";
+				}
+			}
+		}	
+
+		function openpara(curEle)
+		{
+			//console.log("test");
+			//console.log(curEle);
+			//console.log(curEle.nextElementSibling);
+			if(curEle.nextElementSibling.style.display=="none")
+			{
+				para = document.getElementsByTagName("p")
+
+			for(i=0;i<para.length;i++)
+			{
+				para[i].style.display="none";
+			}
+			curEle.nextElementSibling.style.display = "block";
+		}
+		}	
+	</script>
+</body>
+</html>
