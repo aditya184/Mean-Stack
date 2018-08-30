@@ -1,0 +1,43 @@
+<button onclick="show()">Enter</button>
+<button onclick="show1()">Enter1</button>
+<p>Test</p>
+<h1>Test1</h1>
+
+<script type="text/javascript">
+	function show()
+	{
+		//document.querySelector("p").innerHTML = "Hello";
+		setTimeout(function(){
+			document.querySelector("p").innerHTML = "Hello";
+		},2000);
+	}
+
+	x=1;
+	function show1()
+	{
+		document.querySelector("h1").innerHTML = x;
+		setInterval(function(){
+			x++;
+			document.querySelector("h1").innerHTML = x;
+		},500);
+	}
+</script>
+
+<button onclick="getData(10,20,30,40,50)">Test</button>
+<script type="text/javascript">
+	//rest and spread parameters
+	getData=function(a,b,...val){
+		console.log(val);
+		console.log(a);
+		console.log(b);
+	}
+</script>
+
+<button id="btn">Enter2</button>
+<script type="text/javascript">
+	//console.log(document.querySelector("#btn"));
+	document.querySelector("#btn").addEventListener("click",function()
+	{
+		console.log("hello")
+	})
+</script>

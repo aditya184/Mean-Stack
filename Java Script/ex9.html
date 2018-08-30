@@ -1,0 +1,37 @@
+<script type="text/javascript">
+	rec=[10,20,30,40,50];
+	console.log(rec);
+
+	rec.push(1000);
+	console.log(rec);
+
+	rec.unshift(2000);
+	console.log(rec);
+
+	rec.pop();
+	console.log(rec);
+
+	rec.shift();
+	console.log(rec);
+
+	rec.push(30);
+	console.log(rec);
+
+	pos=rec.indexOf(30);
+	console.log(pos);
+
+	pos=rec.lastIndexOf(30);
+	console.log(pos);
+
+	pos=rec.indexOf(300);
+	console.log(pos);
+
+	ans = rec.join("+");
+	console.log(ans);
+	console.log(eval(ans));
+
+	ans=rec.splice(1,3);
+	console.log(rec);
+	console.log(ans);
+
+</script>

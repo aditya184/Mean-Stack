@@ -1,0 +1,38 @@
+<button onclick="show()">Enter</button>
+<button onclick="show1()">Enter1</button>
+<button onclick="calc()">Enter2</button>
+
+<script type="text/javascript">
+	function show(){
+		console.log("test");
+	}
+
+	function show(){
+		console.log("test2");
+		console.log(typeof 124);
+		console.log(typeof "124");
+		console.log(typeof 1.99);
+		console.log(typeof true);
+		console.log(typeof [10,20,30]);
+		console.log(typeof {name:"abc"});
+		console.log(typeof show1);
+	}
+
+	//function as ref. variable
+	show1=function()
+	{
+		console.log("Hello")
+	}
+
+	show2=function()
+	{
+		console.log("Hello2")
+	}
+
+	function calc()
+	{
+		show1()
+		show2()
+	}
+
+</script>
