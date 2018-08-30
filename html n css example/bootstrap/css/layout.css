@@ -2,3 +2,21 @@
 {
 	padding-right: 5px;
 }
+.footer{
+	background: #eee;
+}
+.logo{padding: 15px 0;border-bottom: 1px solid #eee;}
+.logo .col-md-3 .dropdown{float: left;margin:0 1%;}
+.logo .col-md-3{padding-top: 10px;}
+.navbar-default{
+	background-color: #fff;
+	border-color: #fff;
+}
+.carousel-control.left,.carousel-control.right{background-image: none;}
+.product h2,.footer h2{font-size: 25px;text-transform: lowercase;font-variant: small-caps;color:#EC971F;}
+.panel-default > .panel-heading {
+    background-color: #fff;
+    border-color: #fff;
+}
+.product ul li a,.footer ul li a,.logo .col-md-5 ul li a{color: #666;font-variant: small-caps;}
+.banner{margin:10% 0;}
