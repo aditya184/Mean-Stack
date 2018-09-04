@@ -1,0 +1,29 @@
+<input type="checkbox" class="chk"/>
+<input type="password" class="pass"/>
+
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		//$(".chk").prop("checked",true);
+		$(".chk").prop("checked",false);
+		
+		$(".chk").click(function(){
+			//alert("test")
+			//console.log( $(this) )
+			ans=$(this).is(":checked");
+			//console.log(ans);
+			/*if(ans)
+			{
+				$(".pass").attr("type","text")
+			}
+			else
+			{
+				$(".pass").attr("type","password")
+			}*/
+
+			(ans)?($(".pass").attr("type","text")):($(".pass").attr("type","password"))
+		
+		});
+	});
+</script>

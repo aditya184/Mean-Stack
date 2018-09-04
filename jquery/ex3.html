@@ -1,0 +1,16 @@
+<input type="text" class="txt"><span>Invalid</span>
+<br><button>Check</button>
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".txt").val("")
+		$("span").css("display","none")
+
+		$("button").click(function(){
+			//alert("test")
+			ans=$(".txt").val();
+			//console.log(ans)
+			(ans.length==0)?($("span").css("display","block")):($("span").css("display","none"))
+		})
+	})
+</script>

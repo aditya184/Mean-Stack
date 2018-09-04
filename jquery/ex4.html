@@ -1,0 +1,37 @@
+<table border="1" width="400" align="center" style="border-collapse: collapse;">
+	<tr>
+		<td>Enter Name</td>
+		<td>
+			<input type="text">
+			<span>Enter Name</span>
+		</td>
+	</tr>
+	<tr>
+		<td>Enter Mobile</td>
+		<td>
+			<input type="text">
+			<span>Enter Mobile</span>
+		</td>
+	</tr>
+	<tr>
+		<td>Enter Email</td>
+		<td>
+			<input type="text">
+			<span>Enter Email</span>
+		</td>
+	</tr>
+</table>
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("table span").hide();
+		$("input[type=text]").focus(function(){
+			//console.log("test")
+			$(this).next().fadeIn(300);
+		});
+		$("input[type=text]").blur(function(){
+			//console.log("test")
+			$(this).next().fadeOut(300);
+		});
+	})
+</script>

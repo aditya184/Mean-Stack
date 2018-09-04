@@ -1,0 +1,35 @@
+<ul>
+	 <li>username</li>
+	 <li><input type="text" class="user"></li>
+	 <li class="passcontent">Password</li>
+	 <li class="passcontent"><input type="text" class="pass"></li>
+	 <li class="buttoncontent"><input type="button" value="Login"></li>
+</ul>
+
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".passcontent,.buttoncontent").hide();
+		$(".user,.pass").val("");
+		$(".user").keyup(function(){
+			//console.log("test")
+			//console.log($(this).val());
+			if($(this).val().length > 2){
+				$(".passcontent").slideDown(200);
+			}
+			else{
+				$(".passcontent,.buttoncontent").slideUp(200);
+			}
+		})
+		$(".pass").keyup(function(){
+			//console.log("test")
+			//console.log($(this).val());
+			if($(this).val().length > 2){
+				$(".buttoncontent").slideDown(200);
+			}
+			else{
+				$(".buttoncontent").slideUp(200);
+			}
+		})
+	})
+</script>
