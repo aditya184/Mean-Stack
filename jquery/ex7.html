@@ -1,0 +1,56 @@
+<div class="product">
+	<div class="imgbox">
+		<img src="product1.jpg">
+		<h2>$90</h2>
+		<p>Product Name</p>
+		<p><button>Add to Cart</button></p>
+	</div>
+	<div class="slidebox"></div>
+</div>
+
+<style type="text/css">
+	.product{
+		width: 268px;
+		border:1px solid;
+		margin: 100px auto;
+		position: relative;
+		text-align: center;
+		overflow: hidden;
+	}
+	.imgbox{
+		width:268px;
+	}
+	.slidebox{
+		width: 268px;
+		position: absolute;
+		background-color: orange;
+		left:0;
+		top:0;
+	}
+</style>
+
+
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+
+	$(document).ready(function(){
+		var hi = $(".product").height();
+		//console.log(hi);
+		$(".slidebox").height(hi);
+		$(".slidebox").css("top",-hi+"px");
+
+		$(".product").mouseenter(function(){
+			//console.log(111);
+			$(".slidebox").stop(true,false).animate({
+				"top":0
+			},500)
+		})
+		$(".product").mouseleave(function(){
+			//console.log(222);
+			$(".slidebox").stop(true,false).animate({
+				"top":-hi+"px"
+			},500)
+		})
+	});
+
+</script>
