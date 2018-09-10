@@ -1,0 +1,78 @@
+<ul>
+	<li>Enter Name</li>
+	<li><input type="text" id="txt1"></li>
+	<li>Enter Age</li>
+	<li><input type="text" id="txt2"></li>
+	<li><input type="button" id="btn" value="Add">
+		<input type="button" id="updatebtn" value="Update"></li>
+</ul>
+
+<div class="err"></div>
+<table border="1" width="200" id="table"></table>
+
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+
+<script type="text/javascript">
+
+	$(document).ready(function(){
+		$("#updatebtn").hide();
+		$("#btn").click(function(){
+
+			val1 = $("#txt1").val();
+			val2 = $("#txt2").val();
+
+			if(val1.length == 0 ||val2.length == 0)
+			{
+				$(".err").html("Please Enter Record");
+			}
+			else
+			{
+				str = "<tr><td>"+val1+"</td><td>"+val2+"</td><td><button class='delete'>Delete</button></td><td><button class='edit'>Edit</button></td></tr>";
+				//console.log(str);
+				$("#table").append(str);
+				$("#txt1,#txt2").val("");
+			}
+		});
+	
+		// $("#delete").click(function(){
+		// 	alert("test");
+		// })
+
+		$(document).on("click",".delete",function(){
+			//alert("test");
+			ans = confirm("Do u want to delete?")
+			//alert(ans);
+			if(ans)
+			{
+				$(this).parent().parent().fadeOut(500);
+			}
+		})
+
+		$(document).on("click",".edit",function(){
+			//alert("test");
+			$("#updatebtn").show();
+			$("#btn").hide();
+			ans1 = $(this).parent().parent().children("td:eq(0)").text();
+			//alert(ans1);
+			ans2 = $(this).parent().parent().children("td:eq(1)").text();
+			//alert(ans2);
+			$("#txt1").val(ans1);
+			$("#txt2").val(ans2);
+
+			pos = $(this).parent().parent().index();
+			//alert(pos);
+		})
+
+		$("#updatebtn").click(function(){
+			val1 = $("#txt1").val();
+			val2 = $("#txt2").val();
+
+			//$("#table").children("tr").eq(pos).css("background","gray");
+			$("#table").children("tr").eq(pos).children("td").eq(0).text(val1);
+			$("#table").children("tr").eq(pos).children("td").eq(1).text(val2);
+
+			$("#txt1,#txt2").val("");
+		})
+
+	});
+</script>
