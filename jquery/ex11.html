@@ -35,7 +35,7 @@
 	.box span{display: inline-block;width: 50px;height: 10px;background: #aaa;cursor: pointer;}
 	.redclass{background: #900;}
 	.grayclass{background:#aaa;}
-	.leftbox{width:48px;height:48px;position:absolute;left:2%;top:45%;cursor:pointer;display: none;}
+	.leftbox{width:64px;height:64px;position:absolute;left:2%;top:45%;cursor:pointer;display: none;}
 	.rightbox{width:48px;height:48px;position:absolute;right:2%;top:45%;cursor:pointer;}
 </style>
 
@@ -52,10 +52,10 @@
 				var pos = $(this).index();
 				//alert(pos);
 				curpos=pos;
+				maxpos=curpos-1;
 				$(".slider").animate({"margin-left":-(pos * $(".slides").width())+"px"},500)
 				$(".box span").css("background","#aaa")
 				$(this).css("background","#900")
-
 				if(curpos>0)
 				{
 					$(".leftbox").fadeIn()
@@ -63,38 +63,58 @@
 				else
 				{
 					$(".leftbox").fadeOut()
-
 				}
-
+				if(maxpos<=0)
+				{
+					$(".rightbox").fadeIn()
+				}
+				else
+				{
+					$(".rightbox").fadeOut()
+				}
 			});
-
 			$(".leftbox").click(function(){
 				curpos--;
+				maxpos=curpos-1;
 				$(".slider").animate({
 					"margin-left":-(curpos*$(".slides").width())+"px"
 				},500)
 				if(curpos>0)
 				{
-					$(".leftbox").fadeIn()
-
+				 	$(".leftbox").fadeIn()
 				}
 				else
 				{
 					$(".leftbox").fadeOut()
+				}
+				if(maxpos<=0)
+				{
+					$(".rightbox").fadeIn()
+				}
+				else
+				{
+					$(".rightbox").fadeOut()
 				}
 				$(".box span").css("background","#aaa")
 				$(".box span").eq(curpos).css("background","#900")
 			})
 			$(".rightbox").click(function(){
 				curpos++;
+				maxpos=curpos-1;
 				$(".slider").animate({
 					"margin-left":-(curpos*$(".slides").width())+"px"
 				},500)
 				if(curpos>0)
 				{
+				 	$(".leftbox").fadeIn()
+				}
+				else
+				{
+					$(".leftbox").fadeOut()
+				}
+				if(maxpos<=0)
+				{
 					$(".rightbox").fadeIn()
-					$(".leftbox").fadeIn()
-
 				}
 				else
 				{
@@ -104,4 +124,3 @@
 				$(".box span").eq(curpos).css("background","#900")
 			})
 	})
-</script>
