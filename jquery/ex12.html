@@ -1,0 +1,40 @@
+<style type="text/css">
+	.userdetails{
+		border: 1px solid red;
+		background: #eee;
+		font-size: 30px;
+		font-family: arial;
+	}
+	.shadow{
+		box-shadow: 1px 2px 4px black;
+	}
+</style>
+
+<button class="btn1">
+	Apply
+</button>
+<button class="btn2">
+	Remove
+</button>
+<button class="btn3">
+	Apply/Remove
+</button>
+<input type="text" class="txt">
+
+
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".btn1").click(function(){
+			$(".txt").addClass("userdetails shadow")
+		});
+		$(".btn2").click(function(){
+			$(".txt").removeClass("shadow")
+		});
+		$(".btn3").click(function(){
+			$(".txt").toggleClass("userdetails shadow")
+		});
+
+	});
+</script>
