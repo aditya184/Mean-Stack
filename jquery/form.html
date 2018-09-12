@@ -1,0 +1,70 @@
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<button class="btn">Enter</button>
+<button class="btn1">Enter1</button>
+<p class="msg">Text</p>
+
+<form id="userform">
+	<input type="text" name="x1">
+	<input type="text" name="x2">
+	<button class="btn3" type="button">Send</button>
+	<button class="btn4" type="button">Send1</button>
+</form>
+
+
+<script type="text/javascript">
+		$(document).ready(function() {
+			$(".btn").click(function(){
+				$.ajax({
+					type:"get",
+					url:"example.php",
+					success:function(response){
+						//console.log(response)
+						$(".msg").html(response)
+					},
+					error:function(errorMsg){
+						//console.log(errorMsg)
+						$(".msg").html("Page Does not Exist")
+					}
+				})
+			})
+
+			$(".btn1").click(function(){
+				$.get("example.php",function(response){
+					$(".msg").html(response)
+				})
+				.fail(function(errorMsg){
+					$(".msg").html("Page Does Not Exist")
+				})
+			})
+
+			$(".btn3").click(function(){
+				var rec = $("#userform").serialize();
+				//console.log(rec)
+				$.ajax({
+					type:"post",
+					url:"example2.php",
+					data:rec,
+					success:function(response){
+						//console.log(response)
+						$(".msg").html(response)
+					},
+					error:function(errorMsg){
+						//console.log(errorMsg)
+						$(".msg").html("Page Does not Exist")
+					}
+				})
+			})
+
+			$(".btn4").click(function(){
+				var rec = $("#userform").serialize();
+				//console.log(rec)
+				$.post("example2.php",rec,function(response){
+					$(".msg").html(response)
+				})
+				.fail(function(errorMsg){
+					$(".msg").html("Page Does Not Exist")
+				})
+			})
+
+		});
+</script>
